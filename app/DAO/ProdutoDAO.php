@@ -38,6 +38,8 @@ class ProdutoDAO{
         $result->bindValue(':prod_marca',$dados->prod_marca);
         $result->bindValue(':prod_fornecedor',$dados->prod_fornecedor);
         $result->bindValue(':prod_estoque',$dados->prod_estoque);
+
+        $result->execute();
     }
 
     public function atualizar($dados){
