@@ -31,7 +31,8 @@ class ProdutoDAO{
     }
 
     public function cadastrar($dados){
-        $sql = "INSET INTO {$this->table}(prod_nome,prod_marca)"
+        $sql = "INSET INTO {$this->table}(prod_nome,prod_marca,prod_fornecedor,)
+                VALUES(:prod_nome,:prod_marca,:prod_fornecedor)"
     }
 
     public function atualizar($dados){
