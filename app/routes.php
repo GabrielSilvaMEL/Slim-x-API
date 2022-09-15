@@ -21,7 +21,7 @@ $app->group('/api',function(RouteCollectorProxy $group){
 })->add(new Tuupola\Middleware\JwtAuthentication([
     'secret' => getenv('JWT_SECRET'),
     'attribute' => 'jwt',
-    'reaxed' => ['localhost']
+    'relaxed' => ['localhost']
 ]));
 
 $app->get('/api/token', TokenController::class.':gerar_token');
