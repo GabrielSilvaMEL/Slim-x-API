@@ -1,0 +1,28 @@
+CONTEÚDO COMPACTADO--
+me.aulasdigitais.com.br/curso-api.zip
+---------------------
+
+api: application programming interface
+ é uma interface que permite mensaens entre duas aplicações
+
+----
+get - retorna dados
+post - cria um novo dado
+put - trabalha com toda coleção e atualiza dados
+path - aplica modificiaões parciais em um recurso
+delete - 
+------
+erro 400 - bad request
+erro 500 - internal server error - erro do lado do servidor
+
+
+
+
+----------
+.htacces define se a rota existe
+
+app-> get 
+	chamando rota definida
+app->group
+	trabalha com grupo de rotas
+	exemplo /carros/carrovermelho
