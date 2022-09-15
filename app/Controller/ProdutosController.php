@@ -40,7 +40,7 @@ class ProdutosController{
     public function cadastrar($request, $response, $args){
         $status = null;
         $mensagem = null;
-        $data = (object) $request->getParseBody();
+        $data = (object) $request->getParsedBody();
         
         try {
             $conexao = new conexaoDAO();
@@ -50,7 +50,7 @@ class ProdutosController{
             $produtoDAO->cadastrar($data);
 
             $status = 'sucesso';
-            $menssagem = 'Produto cadastrado com sucesso';
+            $mensagem = 'Produto cadastrado com sucesso';
         } catch (\Exception $e) {
             $status = 'erro';
             $mensagem = $e->getMessage();

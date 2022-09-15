@@ -16,4 +16,5 @@ $app->get('/api/ola_mundo', function (Request $request, Response $response, $arg
 
 $app->group('/api',function(RouteCollectorProxy $group){
     $group->get('/produtos', ProdutosController::class.':listar_todos');
+    $group->post('/produtos', ProdutosController::class.':cadastrar');
 });
