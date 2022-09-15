@@ -31,8 +31,13 @@ class ProdutoDAO{
     }
 
     public function cadastrar($dados){
-        $sql = "INSET INTO {$this->table}(prod_nome,prod_marca,prod_fornecedor,)
-                VALUES(:prod_nome,:prod_marca,:prod_fornecedor)"
+        $sql = "INSERT INTO {$this->table}(prod_nome,prod_marca,prod_fornecedor,prod_estoque)
+                VALUES(:prod_nome,:prod_marca,:prod_fornecedor, :prod_estoque)";
+        $result = $this->db->prepare($sql);
+        $result->bindValue(':prod_nome',$dados->prod_nome);
+        $result->bindValue(':prod_marca',$dados->prod_marca);
+        $result->bindValue(':prod_fornecedor',$dados->prod_fornecedor);
+        $result->bindValue(':prod_estoque',$dados->prod_estoque);
     }
 
     public function atualizar($dados){
