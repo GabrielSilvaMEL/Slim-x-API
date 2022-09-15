@@ -18,3 +18,5 @@ $app->group('/api',function(RouteCollectorProxy $group){
     $group->get('/produtos', ProdutosController::class.':listar_todos');
     $group->post('/produtos', ProdutosController::class.':cadastrar');
 });
+
+$app->get('/api/token',);
